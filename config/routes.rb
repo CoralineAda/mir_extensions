@@ -1,4 +1,4 @@
-Foo::Application.routes.draw do
+MirExtensions::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -14,11 +14,14 @@ Gem::Specification.new do |s|
   s.email = %q{corey@seologic.com}
   s.extra_rdoc_files = [
     "LICENSE",
+     "README",
      "README.rdoc"
   ]
   s.files = [
-    ".document",
+    ".bundle/config",
+     ".document",
      ".gitignore",
+     ".rspec",
      "Gemfile",
      "Gemfile.lock",
      "LICENSE",
@@ -27,6 +30,8 @@ Gem::Specification.new do |s|
      "VERSION",
      "app/controllers/application_controller.rb",
      "app/helpers/application_helper.rb",
+     "app/models/primary.rb",
+     "app/models/secondary.rb",
      "config.ru",
      "config/application.rb",
      "config/boot.rb",
@@ -42,13 +47,16 @@ Gem::Specification.new do |s|
      "config/initializers/session_store.rb",
      "config/locales/en.yml",
      "config/routes.rb",
+     "db/mir_ext_test.sqlite3",
+     "db/schema.rb",
      "db/seeds.rb",
-     "doc/profile.txt",
-     "doc/spec.html",
+     "db/test.sqlite3",
      "lib/core_ext/controller_extensions.rb",
      "lib/core_ext/core_ext.rb",
      "lib/core_ext/helper_extensions.rb",
      "lib/mir_extensions.rb",
+     "lib/tasks/.gitkeep",
+     "log/development.log",
      "log/test.log",
      "mir_extensions.gemspec",
      "public/404.html",

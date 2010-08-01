@@ -1,5 +1,1 @@
 --colour
-#--loadby mtime
---format html:doc/spec.html
---format profile:doc/profile.txt
---format progress
