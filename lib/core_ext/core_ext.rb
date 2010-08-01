@@ -246,3 +246,99 @@ class Header < SOAP::Header::SimpleHandler
   end
 end
 
+class ActiveRecord::Base
+
+  #FIXME Extending AR in this way will stop working under Rails 2.3.2 for some reason.
+
+#   scope :order_by, lambda{ |col, dir| {:order => (col.blank?) ? ( (dir.blank?) ? 'id' : dir ) : "#{col} #{dir}"} }
+#   scope :limit, lambda { |num| { :limit => num } }
+
+  # TODO: call the column_names class method on the subclass
+  #  named_scope :sort_by, lambda{ |col, dir| {:order => (col.blank?) ? ( (dir.blank?) ? (Client.column_names.include?('name') ? 'name' : 'id') : h(dir) ) : "#{h(col)} #{h(dir)}"} }
+
+  # Returns an array of SQL conditions suitable for use with ActiveRecord's finder.
+  # valid_criteria is an array of valid search fields.
+  # pairs is a hash of field names and values.
+  def self.search_conditions( valid_search_criteria, pairs, operator = 'OR' )
+    if valid_search_criteria.detect{ |_c| ! pairs[_c].blank? } || ! pairs[:query].blank?
+      _conditions = []
+      _or_clause = ''
+      _or_clause_values = []
+      _int_terms = {}
+      _text_terms = {}
+
+      # build or clause for keyword search
+      unless pairs[:query].blank? || ! self.respond_to?(:flattened_content)
+        pairs[:query].split(' ').each do |keyword|
+          _or_clause += 'flattened_content LIKE ? OR '
+          _or_clause_values << "%#{keyword}%"
+        end
+
+        _or_clause.gsub!( / OR $/, '')
+      end
+
+      # iterate across each valid search field
+      valid_search_criteria.each do |_field|
+        # build or clause for keyword search
+        unless pairs[:query].blank? || self.respond_to?(:flattened_content)
+          pairs[:query].split(' ').each do |keyword|
+            _or_clause += "#{_field} LIKE ? OR "
+            _or_clause_values << "%#{keyword}%"
+          end
+        end
+
+        # build hashes of integer and/or text search fields and values for each non-blank param
+        if ! pairs[_field].blank?
+          _field.to_s =~ /^id$|_id$|\?$/ ? _int_terms[_field.to_s.gsub('?', '')] = pairs[_field] : _text_terms[_field] = pairs[_field]
+        end
+      end
+
+      _or_clause.gsub!( / OR $/, '')
+
+      # convert the hash to parametric SQL
+      if _or_clause.blank?
+        _conditions = sql_conditions_for( _int_terms, _text_terms, nil, operator )
+      elsif _int_terms.keys.empty? && _text_terms.keys.empty?
+        _conditions = [ _or_clause ]
+      else
+        _conditions = sql_conditions_for( _int_terms, _text_terms, _or_clause, operator )
+      end
+
+      # add integer values
+      _int_terms.keys.each{ |key| _conditions << _int_terms[key] }
+      # add wildcard-padded values
+      _text_terms.keys.each{ |key| _conditions << "%#{_text_terms[key]}%" }
+
+      unless _or_clause_values.empty?
+        # add keywords
+        _conditions += _or_clause_values
+      end
+
+      return _conditions
+    else
+      return nil
+    end
+  end
+
+  def self.to_option_values
+    self.all.map{ |_x| [_x.name, _x.id] }
+  end
+
+  # Strips the specified attribute's value.
+  def strip(attribute)
+    value = self[attribute]
+    self.send("#{attribute}=", value && value.strip)
+  end
+
+  private
+
+  def self.sql_conditions_for( integer_fields, text_fields, or_clause = nil, operator = 'OR' )
+    if integer_fields.empty? && ! text_fields.empty?
+      [ text_fields.keys.map{ |k| k } * " LIKE ? #{operator} " + ' LIKE ?' + (or_clause ? " #{operator} #{or_clause}" : '') ]
+    elsif ! integer_fields.empty? && text_fields.empty?
+      [ integer_fields.keys.map{ |k| k } * " = ? #{operator} " + ' = ?' + (or_clause ? " #{operator} #{or_clause}" : '') ]
+    else
+      [ integer_fields.keys.map{ |k| k } * " = ? #{operator} " + " = ? #{operator} " + text_fields.keys.map{ |k| k } * " LIKE ? #{operator} " + ' LIKE ?' + (or_clause ? " #{operator} #{or_clause}" : '') ]
+    end
+  end
+end

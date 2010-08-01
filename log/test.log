@@ -13,3 +13,15 @@
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPrimary Load (0.2ms)[0m  SELECT "primaries".* FROM "primaries"
+SQLite3::SQLException: no such table: primaries: SELECT     "primaries".* FROM       "primaries"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPrimary Load (0.2ms)[0m  SELECT "primaries".* FROM "primaries"
+SQLite3::SQLException: no such table: primaries: SELECT     "primaries".* FROM       "primaries"

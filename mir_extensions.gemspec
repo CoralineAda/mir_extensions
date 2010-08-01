@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
      "Gemfile",
      "Gemfile.lock",
      "LICENSE",
+     "README",
      "README.rdoc",
      "Rakefile",
      "VERSION",
@@ -32,6 +33,8 @@ Gem::Specification.new do |s|
      "app/helpers/application_helper.rb",
      "app/models/primary.rb",
      "app/models/secondary.rb",
+     "app/views/layouts/application.html.erb",
+     "autotest/discover.rb",
      "config.ru",
      "config/application.rb",
      "config/boot.rb",
@@ -47,16 +50,20 @@ Gem::Specification.new do |s|
      "config/initializers/session_store.rb",
      "config/locales/en.yml",
      "config/routes.rb",
+     "db/development.sqlite3",
      "db/mir_ext_test.sqlite3",
      "db/schema.rb",
      "db/seeds.rb",
      "db/test.sqlite3",
+     "doc/README_FOR_APP",
      "lib/core_ext/controller_extensions.rb",
      "lib/core_ext/core_ext.rb",
      "lib/core_ext/helper_extensions.rb",
      "lib/mir_extensions.rb",
      "lib/tasks/.gitkeep",
      "log/development.log",
+     "log/production.log",
+     "log/server.log",
      "log/test.log",
      "mir_extensions.gemspec",
      "public/404.html",
@@ -77,7 +84,8 @@ Gem::Specification.new do |s|
      "spec/controllers/application_controller_spec.rb",
      "spec/helpers/application_helper_spec.rb",
      "spec/mir_extensions_spec.rb",
-     "spec/spec_helper.rb"
+     "spec/spec_helper.rb",
+     "vendor/plugins/.gitkeep"
   ]
   s.homepage = %q{http://github.com/Bantik/mir_extensions}
   s.rdoc_options = ["--charset=UTF-8"]

@@ -90,22 +90,13 @@ describe "MirExtensions" do
   end
 
   it 'converts active records to an array of name-value pairs suitable for select tags' do
-    class Primary < ActiveRecord::Base
-      attr_accessor :id, :name
-      def initialize(attributes = {})
-        attributes.each{|name,value| send("#{name}=", value) }
-      end
-      def persisted?
-        false
-      end
-    end
-    Primary.stubs(:find).returns([Primary.new(:id => 1, :name => 'Admin'), Primary.new(:id => 2, :name => 'User')])
-    Primary.to_option_values.should == [ ['Admin', 1], ['User', 2] ]
+    Primary.stubs(:all).returns([Primary.new(:name => 'Admin'), Primary.new(:name => 'User')])
+    Primary.to_option_values.should == [ ['Admin', nil], ['User', nil] ]
   end
 
   it 'strips the values of specified attributes' do
-    p = Primary.new :name => ' foo bar  '
-    p.strip :name
+    p = Primary.new(:name => ' foo bar  ')
+    p.strip(:name)
     p.name.should == 'foo bar'
   end
 
