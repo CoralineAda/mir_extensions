@@ -1,28 +1,3 @@
-require 'rubygems'
-require 'singleton'
-
-module CoreExt
-
-  # String Extensions ==============================================================================
-
-  String.class_eval do
-
-    include ActionView::Helpers::NumberHelper
-
-    # Usage: "3125552312".to_phone
-    # Returns: 312-555-2313
-    #
-    # Usage: "3125552313".to_phone(:area_code => true)
-    # Returns : (312) 555-2313
-    #
-    def to_phone(options = {})
-      number_to_phone(self.to_i, options)
-    end
-
-  end
-
-end
-
 class ActionController::Base
   require 'mir_extensions'
   require 'socket'
@@ -59,3 +34,4 @@ class ActionController::Base
     return supplied
   end
 end
+

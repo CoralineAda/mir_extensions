@@ -1,11 +1,9 @@
 require 'singleton'
-require 'core_ext'
+require File.expand_path(File.dirname(__FILE__) + '/core_ext/core_ext')
 require 'friendly_id'
 
 module MirExtensions
 
-  include FriendlyId
-  
   # Constants ======================================================================================
   
   MONTHS = {0 => "JAN", 1 => "FEB", 2 => "MAR", 3 => "APR", 4 => "MAY", 5 => "JUN", 6 => "JUL", 7 => "AUG", 8 => "SEP", 9 => "OCT", 10 => "NOV", 11 => "DEC"}

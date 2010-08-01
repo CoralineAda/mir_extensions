@@ -1,19 +1,44 @@
 Profiling enabled.
-............
+............FF........FF...............F
 
 
 Top 10 slowest examples:
-0.0007680 ApplicationController detects its IP address
-0.0006270 ApplicationController sanitizes the sort-by param
-0.0005860 ApplicationController sanitizes the sort-direction param
-0.0004310 MirExtensions class methods state codes handles failures gracefully
-0.0002410 MirExtensions class methods normalizes slugs
-0.0002370 ApplicationController sanitizes params
-0.0002290 MirExtensions string extensions formats phone numbers
-0.0001170 MirExtensions string extensions formats phone numbers, accepting options
-0.0001170 MirExtensions class methods state codes returns the state for a given state code
-0.0001120 MirExtensions class methods state codes returns the state code for a given state
+0.0039660 MirExtensions expands address abbreviations
+0.0020790 MirExtensions detects a valid HTTP URL
+0.0014150 MirExtensions detects page URLs
+0.0012260 MirExtensions converts a hash to HTTP parameters
+0.0011580 MirExtensions detects trailing slashes
+0.0010250 MirExtensions detects HTTP URLs
+0.0010000 MirExtensions converts a URI string to a URI object
+0.0008110 MirExtensions returns the host of a valid URI string
+0.0008040 ApplicationController detects its IP address
+0.0006590 ApplicationController sanitizes params
 
-Finished in 0.009727 seconds
+1)
+NoMethodError in 'MirExtensions returns an options string with the default select prompt'
+undefined method `options_for_array' for #<Spec::Example::ExampleGroup::Subclass_2:0x103567440>
+./spec/mir_extensions_spec.rb:57:
 
-12 examples, 0 failures
+2)
+NoMethodError in 'MirExtensions returns an options string with the default select prompt and a default value'
+undefined method `options_for_array' for #<Spec::Example::ExampleGroup::Subclass_2:0x10355b118>
+./spec/mir_extensions_spec.rb:61:
+
+3)
+NameError in 'MirExtensions converts active records to an array of name-value pairs suitable for select tags'
+uninitialized constant Primary
+./spec/mir_extensions_spec.rb:101:
+
+4)
+NameError in 'MirExtensions strips the values of specified attributes'
+uninitialized constant Primary
+./spec/mir_extensions_spec.rb:106:
+
+5)
+NoMethodError in 'ApplicationHelper has methods'
+undefined method `array_to_lines' for ApplicationHelper:Module
+./spec/helpers/application_helper_spec.rb:10:
+
+Finished in 0.034406 seconds
+
+40 examples, 5 failures

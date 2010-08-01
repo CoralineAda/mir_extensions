@@ -181,50 +181,179 @@ a {
 <div class="results">
 <div class="example_group">
   <dl>
-  <dt id="example_group_1">MirExtensions string extensions</dt>
-    <script type="text/javascript">moveProgressBar('8.3');</script>
+  <dt id="example_group_1">ApplicationController</dt>
+    <script type="text/javascript">moveProgressBar('2.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">detects its IP address</span></dd>
+    <script type="text/javascript">moveProgressBar('5.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">sanitizes the sort-by param</span></dd>
+    <script type="text/javascript">moveProgressBar('7.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">sanitizes the sort-direction param</span></dd>
+    <script type="text/javascript">moveProgressBar('10.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">sanitizes params</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_2">MirExtensions string extensions</dt>
+    <script type="text/javascript">moveProgressBar('12.5');</script>
     <dd class="spec passed"><span class="passed_spec_name">formats phone numbers</span></dd>
-    <script type="text/javascript">moveProgressBar('16.6');</script>
+    <script type="text/javascript">moveProgressBar('15.0');</script>
     <dd class="spec passed"><span class="passed_spec_name">formats phone numbers, accepting options</span></dd>
   </dl>
 </div>
 <div class="example_group">
   <dl>
-  <dt id="example_group_2">MirExtensions class methods state codes</dt>
-    <script type="text/javascript">moveProgressBar('25.0');</script>
+  <dt id="example_group_3">MirExtensions class methods state codes</dt>
+    <script type="text/javascript">moveProgressBar('17.5');</script>
     <dd class="spec passed"><span class="passed_spec_name">returns the state code for a given state</span></dd>
-    <script type="text/javascript">moveProgressBar('33.3');</script>
+    <script type="text/javascript">moveProgressBar('20.0');</script>
     <dd class="spec passed"><span class="passed_spec_name">returns the state for a given state code</span></dd>
-    <script type="text/javascript">moveProgressBar('41.6');</script>
+    <script type="text/javascript">moveProgressBar('22.5');</script>
     <dd class="spec passed"><span class="passed_spec_name">handles failures gracefully</span></dd>
   </dl>
 </div>
 <div class="example_group">
   <dl>
-  <dt id="example_group_3">MirExtensions class methods</dt>
-    <script type="text/javascript">moveProgressBar('50.0');</script>
+  <dt id="example_group_4">MirExtensions class methods</dt>
+    <script type="text/javascript">moveProgressBar('25.0');</script>
     <dd class="spec passed"><span class="passed_spec_name">returns the month name for a month number</span></dd>
-    <script type="text/javascript">moveProgressBar('58.3');</script>
+    <script type="text/javascript">moveProgressBar('27.5');</script>
     <dd class="spec passed"><span class="passed_spec_name">returns a canonical URL</span></dd>
-    <script type="text/javascript">moveProgressBar('66.6');</script>
+    <script type="text/javascript">moveProgressBar('30.0');</script>
     <dd class="spec passed"><span class="passed_spec_name">normalizes slugs</span></dd>
   </dl>
 </div>
 <div class="example_group">
   <dl>
-  <dt id="example_group_4">ApplicationController</dt>
+  <dt id="example_group_5">MirExtensions</dt>
+    <script type="text/javascript">makeRed('rspec-header');</script>
+    <script type="text/javascript">makeRed('example_group_5');</script>
+    <script type="text/javascript">moveProgressBar('32.5');</script>
+    <dd class="spec failed">
+      <span class="failed_spec_name">returns an options string with the default select prompt</span>
+      <div class="failure" id="failure_1">
+        <div class="message"><pre>undefined method `options_for_array' for #&lt;Spec::Example::ExampleGroup::Subclass_2:0x103567440&gt;</pre></div>
+        <div class="backtrace"><pre>./spec/mir_extensions_spec.rb:57:</pre></div>
+    <pre class="ruby"><code><span class="linenum">55</span> 
+<span class="linenum">56</span>  it 'returns an options string with the default select prompt' do
+<span class="offending"><span class="linenum">57</span>    options_for_array([['1', 'Option 1'], ['2', 'Option 2'], ['3', 'Option 3']]).should == "#{SELECT_PROMPT_OPTION}<option value=\"1\" >Option 1</option><option value=\"2\" >Option 2</option><option value=\"3\" >Option 3</option>"</span>
+<span class="linenum">58</span>  end
+<span class="linenum">59</span>
+<span class="linenum">60</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+    <script type="text/javascript">moveProgressBar('35.0');</script>
+    <dd class="spec failed">
+      <span class="failed_spec_name">returns an options string with the default select prompt and a default value</span>
+      <div class="failure" id="failure_2">
+        <div class="message"><pre>undefined method `options_for_array' for #&lt;Spec::Example::ExampleGroup::Subclass_2:0x10355b118&gt;</pre></div>
+        <div class="backtrace"><pre>./spec/mir_extensions_spec.rb:61:</pre></div>
+    <pre class="ruby"><code><span class="linenum">59</span>
+<span class="linenum">60</span>  it 'returns an options string with the default select prompt and a default value' do
+<span class="offending"><span class="linenum">61</span>    options_for_array([['1', 'Option 1'], ['2', 'Option 2'], ['3', 'Option 3']], '2').should == "#{SELECT_PROMPT_OPTION}<option value=\"1\" >Option 1</option><option value=\"2\" selected=\"1\">Option 2</option><option value=\"3\" >Option 3</option>"</span>
+<span class="linenum">62</span>  end
+<span class="linenum">63</span>
+<span class="linenum">64</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+    <script type="text/javascript">moveProgressBar('37.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">formats phone numbers</span></dd>
+    <script type="text/javascript">moveProgressBar('40.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">formats phone numbers with separate area codes</span></dd>
+    <script type="text/javascript">moveProgressBar('42.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">handles invalid phone numbers gracefully</span></dd>
+    <script type="text/javascript">moveProgressBar('45.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">formats zip codes</span></dd>
+    <script type="text/javascript">moveProgressBar('47.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">calculates arithmetic means</span></dd>
+    <script type="text/javascript">moveProgressBar('50.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">aliases count to size</span></dd>
+    <script type="text/javascript">moveProgressBar('52.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">converts seconds to hours:minutes:seconds</span></dd>
+    <script type="text/javascript">moveProgressBar('55.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">rounds to the nearest tenth</span></dd>
+    <script type="text/javascript">moveProgressBar('57.5');</script>
+    <dd class="spec failed">
+      <span class="failed_spec_name">converts active records to an array of name-value pairs suitable for select tags</span>
+      <div class="failure" id="failure_3">
+        <div class="message"><pre>uninitialized constant Primary</pre></div>
+        <div class="backtrace"><pre>./spec/mir_extensions_spec.rb:101:</pre></div>
+    <pre class="ruby"><code><span class="linenum">99</span>
+<span class="linenum">100</span>  it 'converts active records to an array of name-value pairs suitable for select tags' do
+<span class="offending"><span class="linenum">101</span>    Primary.stubs(:find).returns([Primary.make_unsaved(:id => 1, :name => 'Admin'), Primary.make_unsaved(:id => 2, :name => 'User')])</span>
+<span class="linenum">102</span>    Primary.to_option_values.should == [ ['Admin', 1], ['User', 2] ]
+<span class="linenum">103</span>  end
+<span class="linenum">104</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+    <script type="text/javascript">moveProgressBar('60.0');</script>
+    <dd class="spec failed">
+      <span class="failed_spec_name">strips the values of specified attributes</span>
+      <div class="failure" id="failure_4">
+        <div class="message"><pre>uninitialized constant Primary</pre></div>
+        <div class="backtrace"><pre>./spec/mir_extensions_spec.rb:106:</pre></div>
+    <pre class="ruby"><code><span class="linenum">104</span>
+<span class="linenum">105</span>  it 'strips the values of specified attributes' do
+<span class="offending"><span class="linenum">106</span>    p = Primary.new :name => ' foo bar  '</span>
+<span class="linenum">107</span>    p.strip :name
+<span class="linenum">108</span>    p.name.should == 'foo bar'
+<span class="linenum">109</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+    <script type="text/javascript">moveProgressBar('62.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">converts arrays to a histogram hash</span></dd>
+    <script type="text/javascript">moveProgressBar('65.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">converts a hash to HTTP parameters</span></dd>
+    <script type="text/javascript">moveProgressBar('67.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">converts a hash to SQL conditions</span></dd>
+    <script type="text/javascript">moveProgressBar('70.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">initializes SOAP headers</span></dd>
+    <script type="text/javascript">moveProgressBar('72.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">capitalizes words without omitting characters like titleize</span></dd>
     <script type="text/javascript">moveProgressBar('75.0');</script>
-    <dd class="spec passed"><span class="passed_spec_name">detects its IP address</span></dd>
-    <script type="text/javascript">moveProgressBar('83.3');</script>
-    <dd class="spec passed"><span class="passed_spec_name">sanitizes the sort-by param</span></dd>
-    <script type="text/javascript">moveProgressBar('91.6');</script>
-    <dd class="spec passed"><span class="passed_spec_name">sanitizes the sort-direction param</span></dd>
-    <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="spec passed"><span class="passed_spec_name">sanitizes params</span></dd>
+    <dd class="spec passed"><span class="passed_spec_name">expands address abbreviations</span></dd>
+    <script type="text/javascript">moveProgressBar('77.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">converts 24-hour time</span></dd>
+    <script type="text/javascript">moveProgressBar('80.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">adds the HTTP-protocol prefix</span></dd>
+    <script type="text/javascript">moveProgressBar('82.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">detects HTTP URLs</span></dd>
+    <script type="text/javascript">moveProgressBar('85.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">detects trailing slashes</span></dd>
+    <script type="text/javascript">moveProgressBar('87.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">detects page URLs</span></dd>
+    <script type="text/javascript">moveProgressBar('90.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">returns the host of a valid URI string</span></dd>
+    <script type="text/javascript">moveProgressBar('92.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">converts a URI string to a URI object</span></dd>
+    <script type="text/javascript">moveProgressBar('95.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">detects a valid HTTP URL</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.009727 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "12 examples, 0 failures";</script>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_6">ApplicationHelper</dt>
+    <script type="text/javascript">moveProgressBar('97.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">loads</span></dd>
+    <script type="text/javascript">makeRed('example_group_6');</script>
+    <script type="text/javascript">moveProgressBar('100.0');</script>
+    <dd class="spec failed">
+      <span class="failed_spec_name">has methods</span>
+      <div class="failure" id="failure_5">
+        <div class="message"><pre>undefined method `array_to_lines' for ApplicationHelper:Module</pre></div>
+        <div class="backtrace"><pre>./spec/helpers/application_helper_spec.rb:10:</pre></div>
+    <pre class="ruby"><code><span class="linenum">8</span>  
+<span class="linenum">9</span>  it 'has methods' do
+<span class="offending"><span class="linenum">10</span>    ApplicationHelper.array_to_lines([:a, :b, :c]).should == 'a<br />b<br />c'</span>
+<span class="linenum">11</span>  end
+<span class="linenum">12</span>  
+<span class="linenum">13</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.034406 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "40 examples, 5 failures";</script>
 </div>
 </div>
 </body>
