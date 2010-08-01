@@ -8,9 +8,6 @@ gem 'rails', '3.0.0.rc'
 gem 'friendly_id'
 gem 'mir_extensions'
 gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'rspec'
-gem 'machinist'
-gem 'mocha'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -33,3 +30,10 @@ gem 'mocha'
 # group :development, :test do
 #   gem 'webrat'
 # end
+group :test do
+  gem "faker"
+  gem "rspec", '>= 2.0.0.beta.19'
+  gem "rspec-rails"
+  gem "machinist", '>= 2.0.0.beta1'
+  gem "mocha"
+end

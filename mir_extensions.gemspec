@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "app/controllers/application_controller.rb",
+     "app/helpers/application_helper.rb",
      "config.ru",
      "config/application.rb",
      "config/boot.rb",
@@ -44,6 +45,9 @@ Gem::Specification.new do |s|
      "db/seeds.rb",
      "doc/profile.txt",
      "doc/spec.html",
+     "lib/core_ext/controller_extensions.rb",
+     "lib/core_ext/core_ext.rb",
+     "lib/core_ext/helper_extensions.rb",
      "lib/mir_extensions.rb",
      "log/test.log",
      "mir_extensions.gemspec",
@@ -61,8 +65,10 @@ Gem::Specification.new do |s|
      "public/javascripts/rails.js",
      "public/robots.txt",
      "public/stylesheets/.gitkeep",
+     "script/rails",
+     "spec/controllers/application_controller_spec.rb",
+     "spec/helpers/application_helper_spec.rb",
      "spec/mir_extensions_spec.rb",
-     "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/Bantik/mir_extensions}

@@ -53,14 +53,6 @@ describe "MirExtensions" do
   
   end
  
-  it 'returns an options string with the default select prompt' do
-    options_for_array([['1', 'Option 1'], ['2', 'Option 2'], ['3', 'Option 3']]).should == "#{SELECT_PROMPT_OPTION}<option value=\"1\" >Option 1</option><option value=\"2\" >Option 2</option><option value=\"3\" >Option 3</option>"
-  end
-
-  it 'returns an options string with the default select prompt and a default value' do
-    options_for_array([['1', 'Option 1'], ['2', 'Option 2'], ['3', 'Option 3']], '2').should == "#{SELECT_PROMPT_OPTION}<option value=\"1\" >Option 1</option><option value=\"2\" selected=\"1\">Option 2</option><option value=\"3\" >Option 3</option>"
-  end
-
   it 'formats phone numbers' do
     ''.number_to_phone('5168675309').should == '516-867-5309'
   end
@@ -98,7 +90,16 @@ describe "MirExtensions" do
   end
 
   it 'converts active records to an array of name-value pairs suitable for select tags' do
-    Primary.stubs(:find).returns([Primary.make_unsaved(:id => 1, :name => 'Admin'), Primary.make_unsaved(:id => 2, :name => 'User')])
+    class Primary < ActiveRecord::Base
+      attr_accessor :id, :name
+      def initialize(attributes = {})
+        attributes.each{|name,value| send("#{name}=", value) }
+      end
+      def persisted?
+        false
+      end
+    end
+    Primary.stubs(:find).returns([Primary.new(:id => 1, :name => 'Admin'), Primary.new(:id => 2, :name => 'User')])
     Primary.to_option_values.should == [ ['Admin', 1], ['User', 2] ]
   end
 

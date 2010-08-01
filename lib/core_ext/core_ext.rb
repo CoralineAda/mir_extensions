@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'singleton'
-require 'controller_extensions'
-require 'helper_extensions'
+require File.expand_path(File.dirname(__FILE__) + '/controller_extensions')
+require File.expand_path(File.dirname(__FILE__) + '/helper_extensions')
 require 'soap/header/simplehandler'
 
 module CoreExt
