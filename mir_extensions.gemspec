@@ -51,6 +51,7 @@ Gem::Specification.new do |s|
      "config/locales/en.yml",
      "config/routes.rb",
      "db/development.sqlite3",
+     "db/mir_ext_development.sqlite3",
      "db/mir_ext_test.sqlite3",
      "db/schema.rb",
      "db/seeds.rb",
