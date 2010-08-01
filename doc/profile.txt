@@ -1,0 +1,19 @@
+Profiling enabled.
+............
+
+
+Top 10 slowest examples:
+0.0007680 ApplicationController detects its IP address
+0.0006270 ApplicationController sanitizes the sort-by param
+0.0005860 ApplicationController sanitizes the sort-direction param
+0.0004310 MirExtensions class methods state codes handles failures gracefully
+0.0002410 MirExtensions class methods normalizes slugs
+0.0002370 ApplicationController sanitizes params
+0.0002290 MirExtensions string extensions formats phone numbers
+0.0001170 MirExtensions string extensions formats phone numbers, accepting options
+0.0001170 MirExtensions class methods state codes returns the state for a given state code
+0.0001120 MirExtensions class methods state codes returns the state code for a given state
+
+Finished in 0.009727 seconds
+
+12 examples, 0 failures

@@ -5,12 +5,14 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "mir_extensions"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Standard extensions and utility methods for SEO Logic's Rails 3 apps.}
+    gem.description = %Q{Standard extensions and utility methods for SEO Logic's Rails 3 apps.}
     gem.email = "corey@seologic.com"
     gem.homepage = "http://github.com/Bantik/mir_extensions"
-    gem.authors = ["Bantik"]
+    gem.authors = ["Corey Ehmke", "Rod Monje"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_development_dependency "friendly_id"
+    
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
