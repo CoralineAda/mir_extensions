@@ -102,6 +102,7 @@ Gem::Specification.new do |s|
      "spec/views/foos/new.html.erb_spec.rb",
      "spec/views/foos/show.html.erb_spec.rb",
      "test/integration/foo_test.rb",
+     "tmp/pids/server.pid",
      "vendor/plugins/.gitkeep"
   ]
   s.homepage = %q{http://github.com/Bantik/mir_extensions}
