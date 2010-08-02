@@ -6,7 +6,7 @@ gem 'rails', '3.0.0.rc'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'friendly_id'
-gem 'mir_extensions'
+gem 'mir_extensions', '>= 0.3.0'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'jeweler'
 gem 'gemcutter'
@@ -38,4 +38,5 @@ group :test do
   gem 'rspec-rails', '>= 2.0.0.beta.10'
   gem "machinist", '>= 2.0.0.beta1'
   gem "mocha"
+  gem "capybara", ">= 0.3.9"
 end

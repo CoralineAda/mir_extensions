@@ -47,4 +47,4 @@ Rake::RDocTask.new do |rdoc|
 end
 
 require File.expand_path('../config/application', __FILE__)
-MirExtensions::Application.load_tasks
+MirExtensionsContainer::Application.load_tasks

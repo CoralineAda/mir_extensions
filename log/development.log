@@ -149,3 +149,1210 @@
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
   [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35mSQL (6.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateFoos (20100801224509)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "foos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "active" boolean, "style" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20100801224509')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("foos")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("primaries")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("secondaries")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_roles_on_name')[0m
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 01 17:46:04 -0500 2010
+
+ActionController::RoutingError (uninitialized constant ApplicationController::MirFormBuilder):
+  app/controllers/application_controller.rb:9
+  app/controllers/foos_controller.rb:1
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 01 17:46:44 -0500 2010
+
+ActionController::RoutingError (uninitialized constant ApplicationController::MirFormBuilder):
+  app/controllers/application_controller.rb:9
+  app/controllers/foos_controller.rb:1
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 01 17:46:46 -0500 2010
+
+ActionController::RoutingError (uninitialized constant ApplicationController::MirFormBuilder):
+  app/controllers/application_controller.rb:9
+  app/controllers/foos_controller.rb:1
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 01 17:47:06 -0500 2010
+
+ActionController::RoutingError (uninitialized constant MirExtensions::MirFormBuilder):
+  app/controllers/application_controller.rb:9
+  app/controllers/foos_controller.rb:1
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 01 17:47:55 -0500 2010
+
+ActionController::RoutingError (uninitialized constant MirFormBuilder):
+  app/controllers/application_controller.rb:5
+  app/controllers/foos_controller.rb:1
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 01 17:48:05 -0500 2010
+
+ActionController::RoutingError (uninitialized constant MirFormBuilder):
+  app/controllers/application_controller.rb:5
+  app/controllers/foos_controller.rb:1
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 01 17:48:06 -0500 2010
+
+ActionController::RoutingError (uninitialized constant MirFormBuilder):
+  app/controllers/application_controller.rb:5
+  app/controllers/foos_controller.rb:1
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 01 17:48:06 -0500 2010
+
+ActionController::RoutingError (uninitialized constant MirFormBuilder):
+  app/controllers/application_controller.rb:5
+  app/controllers/foos_controller.rb:1
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 01 18:03:46 -0500 2010
+  Processing by FoosController#index as HTML
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFoo Load (0.1ms)[0m  SELECT "foos".* FROM "foos"
+Rendered foos/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 19ms (Views: 7.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:03:49 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (32.8ms)
+Rendered foos/new.html.erb within layouts/application (34.5ms)
+Completed   in 43ms
+
+ActionView::Template::Error (undefined method `debug' for nil:NilClass):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :name %><br />
+    16:     <%= f.text_field :name %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :active %><br />
+  /lib/mir_form_builder.rb:110:in `text_field'
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2174244700_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2174244700_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2174256500_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (62.4ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (69.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:04:28 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (5.7ms)
+Rendered foos/new.html.erb within layouts/application (7.1ms)
+Completed   in 16ms
+
+ActionView::Template::Error (undefined method `debug' for nil:NilClass):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :name %><br />
+    16:     <%= f.text_field :name %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :active %><br />
+  /lib/mir_form_builder.rb:110:in `text_field'
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2175138280_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175138280_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175147120_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:04:36 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (10.9ms)
+Rendered foos/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 25ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:05:28 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (6.2ms)
+Rendered foos/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:06:09 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (6.3ms)
+Rendered foos/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:06:16 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (9.3ms)
+Rendered foos/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 23ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:06:18 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (5.6ms)
+Rendered foos/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:06:31 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (9.3ms)
+Rendered foos/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 23ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:06:33 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (5.6ms)
+Rendered foos/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:07:47 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (5.6ms)
+Rendered foos/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 18ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:07:55 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (9.5ms)
+Rendered foos/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:08:08 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (9.6ms)
+Rendered foos/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 23ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:08:09 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (5.7ms)
+Rendered foos/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:08:10 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (5.7ms)
+Rendered foos/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 18ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:08:27 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (6.2ms)
+Rendered foos/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 18ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:08:33 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (9.5ms)
+Rendered foos/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:09:09 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (9.5ms)
+Rendered foos/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 23ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:09:30 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (6.3ms)
+Rendered foos/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 19ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:09:45 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (6.2ms)
+Rendered foos/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:11:00 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (9.7ms)
+Rendered foos/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 18:11:15 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (5.7ms)
+Rendered foos/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 01 19:32:27 -0500 2010
+  Processing by FoosController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFoo Load (0.1ms)[0m  SELECT "foos".* FROM "foos"
+Rendered foos/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 14ms (Views: 6.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 01 19:32:28 -0500 2010
+  Processing by FoosController#index as HTML
+  [1m[36mFoo Load (0.4ms)[0m  [1mSELECT "foos".* FROM "foos"[0m
+Rendered foos/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (1.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("foos")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("primaries")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("secondaries")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_roles_on_name')[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (2.3ms)[0m  CREATE TABLE "foos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "active" boolean, "style" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.8ms)[0m  CREATE TABLE "primaries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.9ms)[0m  CREATE TABLE "secondaries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "primary_id" integer) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("secondaries")[0m
+  [1m[35mSQL (1.8ms)[0m  CREATE INDEX "index_roles_on_name" ON "secondaries" ("primary_id")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (2.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (2.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20100801224509')[0m
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 19:42:10 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (5.9ms)
+Rendered foos/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 20ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 19:54:43 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (5.9ms)
+Rendered foos/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 19ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:00:45 -0500 2010
+  Processing by FoosController#new as HTML
+ERROR: compiling _app_views_foos__form_html_erb___243589292_2175170120_1058430 RAISED compile error
+/Users/bantik/Documents/projects/mir_extensions/app/views/foos/_form.html.erb:16: syntax error, unexpected ')', expecting tASSOC
+...select_prompt, "foo", "bar"] );@output_buffer.safe_concat('
+                              ^
+/Users/bantik/Documents/projects/mir_extensions/app/views/foos/_form.html.erb:19: syntax error, unexpected kEND, expecting ')'
+'); end 
+       ^
+/Users/bantik/Documents/projects/mir_extensions/app/views/foos/_form.html.erb:21: syntax error, unexpected kENSURE, expecting ')'
+/Users/bantik/Documents/projects/mir_extensions/app/views/foos/_form.html.erb:23: syntax error, unexpected kEND, expecting ')'
+Function body:           def _app_views_foos__form_html_erb___243589292_2175170120_1058430(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "foos/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for(@foo) do |f| @output_buffer.safe_concat('
+');   if @foo.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@foo.errors.count, "error") );@output_buffer.safe_concat(' prohibited this foo from being saved:</h2>
+
+      <ul>
+');@output_buffer.append_if_string=        @foo.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  ');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( f.check_box :active, :label => 'Status', :inline_label => 'Active' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( f.select :style, :label => 'Select a Style', [select_prompt, "foo", "bar"] );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/bantik/Documents/projects/mir_extensions/app/views/foos/_form.html.erb:23:in `compile'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_view/template.rb:134:in `render'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/notifications.rb:54:in `instrument'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_view/template.rb:127:in `render'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_view/render/partials.rb:294:in `render_partial'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_view/render/partials.rb:223:in `render'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/notifications.rb:52:in `instrument'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/notifications.rb:52:in `instrument'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_view/render/partials.rb:221:in `render'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_view/render/partials.rb:334:in `_render_partial'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_view/render/rendering.rb:31:in `render'
+/Users/bantik/Documents/projects/mir_extensions/app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175179000_0'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_view/template.rb:135:in `send'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_view/template.rb:135:in `render'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/notifications.rb:54:in `instrument'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_view/template.rb:127:in `render'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_view/render/rendering.rb:59:in `_render_template'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/notifications.rb:52:in `instrument'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/notifications.rb:52:in `instrument'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_view/render/rendering.rb:26:in `render'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/bantik/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activerecord-3.0.0.rc/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/mime_responds.rb:261
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/Users/bantik/Documents/projects/mir_extensions/app/controllers/foos_controller.rb:29:in `new'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/abstract_controller/base.rb:136:in `process_action'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:429:in `_run__64337946__process_action__943997142__callbacks'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:404:in `send'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:404:in `_run_process_action_callbacks'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:93:in `send'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/notifications.rb:52:in `instrument'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/notifications.rb:52:in `instrument'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/abstract_controller/base.rb:105:in `process'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal.rb:133:in `dispatch'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_controller/metal.rb:173
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-mount-0.6.9/lib/rack/mount/route_set.rb:148:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-mount-0.6.9/lib/rack/mount/code_generation.rb:89:in `recognize'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-mount-0.6.9/lib/rack/mount/code_generation.rb:80:in `optimized_each'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-mount-0.6.9/lib/rack/mount/code_generation.rb:88:in `recognize'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-mount-0.6.9/lib/rack/mount/route_set.rb:139:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/routing/route_set.rb:489:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/flash.rb:177:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/cookies.rb:268:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activerecord-3.0.0.rc/lib/active_record/query_cache.rb:32:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activerecord-3.0.0.rc/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activerecord-3.0.0.rc/lib/active_record/query_cache.rb:12:in `cache'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activerecord-3.0.0.rc/lib/active_record/query_cache.rb:31:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/callbacks.rb:410:in `_run_call_callbacks'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/show_exceptions.rb:48:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/railties-3.0.0.rc/lib/rails/rack/logger.rb:13:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/activesupport-3.0.0.rc/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/railties-3.0.0.rc/lib/rails/application.rb:168:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/railties-3.0.0.rc/lib/rails/application.rb:77:in `send'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/railties-3.0.0.rc/lib/rails/application.rb:77:in `method_missing'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/railties-3.0.0.rc/lib/rails/rack/log_tailer.rb:15:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/bantik/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/bantik/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/bantik/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/bantik/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/bantik/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/bantik/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/bantik/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/bantik/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/bantik/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/bantik/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/railties-3.0.0.rc/lib/rails/commands/server.rb:65:in `start'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/railties-3.0.0.rc/lib/rails/commands.rb:30
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/railties-3.0.0.rc/lib/rails/commands.rb:27:in `tap'
+/Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/railties-3.0.0.rc/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered foos/_form.html.erb (16.2ms)
+Rendered foos/new.html.erb within layouts/application (17.8ms)
+Completed   in 26ms
+
+ActionView::Template::Error (compile error
+/Users/bantik/Documents/projects/mir_extensions/app/views/foos/_form.html.erb:16: syntax error, unexpected ')', expecting tASSOC
+...select_prompt, "foo", "bar"] );@output_buffer.safe_concat('
+                              ^
+/Users/bantik/Documents/projects/mir_extensions/app/views/foos/_form.html.erb:19: syntax error, unexpected kEND, expecting ')'
+'); end 
+       ^
+/Users/bantik/Documents/projects/mir_extensions/app/views/foos/_form.html.erb:21: syntax error, unexpected kENSURE, expecting ')'
+/Users/bantik/Documents/projects/mir_extensions/app/views/foos/_form.html.erb:23: syntax error, unexpected kEND, expecting ')'):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, :label => 'Select a Style', [select_prompt, "foo", "bar"] %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:23:in `compile'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175179000_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:01:10 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (11.7ms)
+Rendered foos/new.html.erb within layouts/application (13.3ms)
+Completed   in 22ms
+
+ActionView::Template::Error (undefined local variable or method `select_prompt' for #<#<Class:0x1032b3f50>:0x1032b2380>):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, [select_prompt, "foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2174043980_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2174043980_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2174060140_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (61.9ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (66.7ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:02:18 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (11.6ms)
+Rendered foos/new.html.erb within layouts/application (13.1ms)
+Completed   in 22ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::SELECT_PROMPT):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, [SELECT_PROMPT, "foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2175153720_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175153720_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175162960_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:02:37 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (12.3ms)
+Rendered foos/new.html.erb within layouts/application (13.7ms)
+Completed   in 22ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::SELECT_PROMPT):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, [SELECT_PROMPT, "foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2173866740_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2173866740_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2173875580_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (70.7ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:02:39 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (12.7ms)
+Rendered foos/new.html.erb within layouts/application (14.1ms)
+Completed   in 22ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::SELECT_PROMPT):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, [SELECT_PROMPT, "foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2175070020_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175070020_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175099200_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:02:53 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (17.0ms)
+Rendered foos/new.html.erb within layouts/application (18.7ms)
+Completed   in 28ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::SELECT_PROMPT):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, [SELECT_PROMPT, "foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2175088040_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175088040_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175097080_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:03:47 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (16.9ms)
+Rendered foos/new.html.erb within layouts/application (18.6ms)
+Completed   in 28ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::SELECT_PROMPT):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, [SELECT_PROMPT, "foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2175088040_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175088040_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175097080_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:03:49 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (71.8ms)
+Rendered foos/new.html.erb within layouts/application (73.3ms)
+Completed   in 82ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::SELECT_PROMPT):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, [SELECT_PROMPT, "foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2173799360_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2173799360_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2173817720_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:03:50 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (11.8ms)
+Rendered foos/new.html.erb within layouts/application (13.2ms)
+Completed   in 22ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::SELECT_PROMPT):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, [SELECT_PROMPT, "foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2175045400_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175045400_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175054240_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:04:36 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (15.8ms)
+Rendered foos/new.html.erb within layouts/application (17.5ms)
+Completed   in 27ms
+
+ActionView::Template::Error (undefined local variable or method `select_prompt' for #<#<Class:0x1034b0ee8>:0x1034ad9a0>):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, [select_prompt, "foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2175088040_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175088040_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175097080_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:05:41 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (9.8ms)
+Rendered foos/new.html.erb within layouts/application (73.2ms)
+Completed 200 OK in 82ms (Views: 77.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:05:55 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (7.6ms)
+Rendered foos/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 20ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:06:09 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (74.5ms)
+Rendered foos/new.html.erb within layouts/application (78.4ms)
+Completed 200 OK in 87ms (Views: 82.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:06:20 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (7.5ms)
+Rendered foos/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:06:25 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (7.4ms)
+Rendered foos/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:07:21 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (12.2ms)
+Rendered foos/new.html.erb within layouts/application (13.7ms)
+Completed   in 22ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::SELECT_PROMPT):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, [SELECT_PROMPT, "foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2175019880_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175019880_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175034260_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:07:41 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (17.0ms)
+Rendered foos/new.html.erb within layouts/application (18.7ms)
+Completed   in 28ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::SELECT_PROMPT):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, [SELECT_PROMPT, "foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2175090540_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175090540_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175099580_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:08:27 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (16.7ms)
+Rendered foos/new.html.erb within layouts/application (18.4ms)
+Completed   in 28ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::SELECT_PROMPT):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, [SELECT_PROMPT, "foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2175090540_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175090540_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175099580_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:08:28 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (72.0ms)
+Rendered foos/new.html.erb within layouts/application (73.5ms)
+Completed   in 83ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::SELECT_PROMPT):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, [SELECT_PROMPT, "foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2173801960_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2173801960_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2173816440_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:08:42 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (12.9ms)
+Rendered foos/new.html.erb within layouts/application (14.5ms)
+Completed   in 24ms
+
+ActionView::Template::Error (undefined local variable or method `select_prompt' for #<#<Class:0x10349b048>:0x1034971f0>):
+    13: 
+    14:   <%= f.text_field :name %>
+    15:   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
+    16:   <%= f.select :style, [select_prompt, "foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19: <% end %>
+  app/views/foos/_form.html.erb:16:in `_app_views_foos__form_html_erb___243589292_2175044300_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175044300_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175053220_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:09:15 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (77.2ms)
+Rendered foos/new.html.erb within layouts/application (78.8ms)
+Completed   in 88ms
+
+ActionView::Template::Error (undefined local variable or method `checkmark' for #<#<Class:0x1032694f0>:0x103264298>):
+    16:   <%= f.select :style, ["foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19:   <%= checkmark -%>
+    20:   
+    21: <% end %>
+  app/views/foos/_form.html.erb:19:in `_app_views_foos__form_html_erb___243589292_2173867480_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2173867480_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2173892400_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:09:35 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (12.6ms)
+Rendered foos/new.html.erb within layouts/application (14.2ms)
+Completed   in 23ms
+
+ActionView::Template::Error (undefined local variable or method `checkmark' for #<#<Class:0x103478ae8>:0x103476f18>):
+    16:   <%= f.select :style, ["foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19:   <%= checkmark -%>
+    20:   
+    21: <% end %>
+  app/views/foos/_form.html.erb:19:in `_app_views_foos__form_html_erb___243589292_2174976280_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2174976280_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2174987320_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:09:36 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (71.4ms)
+Rendered foos/new.html.erb within layouts/application (72.8ms)
+Completed   in 81ms
+
+ActionView::Template::Error (undefined local variable or method `checkmark' for #<#<Class:0x10320f928>:0x10320dd58>):
+    16:   <%= f.select :style, ["foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19:   <%= checkmark -%>
+    20:   
+    21: <% end %>
+  app/views/foos/_form.html.erb:19:in `_app_views_foos__form_html_erb___243589292_2173713440_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2173713440_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2173723280_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:09:48 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (18.9ms)
+Rendered foos/new.html.erb within layouts/application (20.6ms)
+Completed   in 30ms
+
+ActionView::Template::Error (undefined local variable or method `checkmark' for #<#<Class:0x1034b1050>:0x1034adc20>):
+    16:   <%= f.select :style, ["foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19:   <%= checkmark -%>
+    20:   
+    21: <% end %>
+  app/views/foos/_form.html.erb:19:in `_app_views_foos__form_html_erb___243589292_2175090540_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175090540_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175099580_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:09:50 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (71.9ms)
+Rendered foos/new.html.erb within layouts/application (73.4ms)
+Completed   in 82ms
+
+ActionView::Template::Error (undefined local variable or method `checkmark' for #<#<Class:0x103244a60>:0x1032400f0>):
+    16:   <%= f.select :style, ["foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19:   <%= checkmark -%>
+    20:   
+    21: <% end %>
+  app/views/foos/_form.html.erb:19:in `_app_views_foos__form_html_erb___243589292_2173808760_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2173808760_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2173825060_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:13:59 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (18.4ms)
+Rendered foos/new.html.erb within layouts/application (20.1ms)
+Completed   in 30ms
+
+ActionView::Template::Error (undefined local variable or method `checkmark' for #<#<Class:0x1034b29a0>:0x1034af6b0>):
+    16:   <%= f.select :style, ["foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19:   <%= checkmark -%>
+    20:   
+    21: <% end %>
+  app/views/foos/_form.html.erb:19:in `_app_views_foos__form_html_erb___243589292_2175091860_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175091860_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175100900_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:14:52 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (73.0ms)
+Rendered foos/new.html.erb within layouts/application (74.5ms)
+Completed   in 83ms
+
+ActionView::Template::Error (undefined local variable or method `checkmark' for #<#<Class:0x10324db10>:0x10324bf40>):
+    16:   <%= f.select :style, ["foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19:   <%= checkmark -%>
+    20:   
+    21: <% end %>
+  app/views/foos/_form.html.erb:19:in `_app_views_foos__form_html_erb___243589292_2173841800_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2173841800_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2173850680_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:14:53 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (12.3ms)
+Rendered foos/new.html.erb within layouts/application (14.0ms)
+Completed   in 22ms
+
+ActionView::Template::Error (undefined local variable or method `checkmark' for #<#<Class:0x1034b7c48>:0x1034b47f0>):
+    16:   <%= f.select :style, ["foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19:   <%= checkmark -%>
+    20:   
+    21: <% end %>
+  app/views/foos/_form.html.erb:19:in `_app_views_foos__form_html_erb___243589292_2175097340_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175097340_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175112580_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:14:54 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (74.0ms)
+Rendered foos/new.html.erb within layouts/application (75.5ms)
+Completed   in 84ms
+
+ActionView::Template::Error (undefined local variable or method `checkmark' for #<#<Class:0x103280650>:0x103273248>):
+    16:   <%= f.select :style, ["foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19:   <%= checkmark -%>
+    20:   
+    21: <% end %>
+  app/views/foos/_form.html.erb:19:in `_app_views_foos__form_html_erb___243589292_2173903600_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2173903600_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2173924900_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:15:08 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (18.2ms)
+Rendered foos/new.html.erb within layouts/application (20.0ms)
+Completed   in 30ms
+
+ActionView::Template::Error (undefined local variable or method `checkmark' for #<#<Class:0x1034b1de8>:0x1034ae558>):
+    16:   <%= f.select :style, ["foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19:   <%= checkmark -%>
+    20:   
+    21: <% end %>
+  app/views/foos/_form.html.erb:19:in `_app_views_foos__form_html_erb___243589292_2175091160_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175091160_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175100200_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:15:09 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (71.4ms)
+Rendered foos/new.html.erb within layouts/application (72.9ms)
+Completed   in 82ms
+
+ActionView::Template::Error (undefined local variable or method `checkmark' for #<#<Class:0x103245f00>:0x103244330>):
+    16:   <%= f.select :style, ["foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19:   <%= checkmark -%>
+    20:   
+    21: <% end %>
+  app/views/foos/_form.html.erb:19:in `_app_views_foos__form_html_erb___243589292_2173812740_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2173812740_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2173828980_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 20:21:45 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (18.6ms)
+Rendered foos/new.html.erb within layouts/application (20.3ms)
+Completed   in 30ms
+
+ActionView::Template::Error (undefined local variable or method `checkmark' for #<#<Class:0x1034b1de8>:0x1034ae558>):
+    16:   <%= f.select :style, ["foo", "bar"], :label => 'Select a Style' %>
+    17:   <%= f.submit %>
+    18: 
+    19:   <%= checkmark -%>
+    20:   
+    21: <% end %>
+  app/views/foos/_form.html.erb:19:in `_app_views_foos__form_html_erb___243589292_2175091160_1058430'
+  app/views/foos/_form.html.erb:1:in `_app_views_foos__form_html_erb___243589292_2175091160_1058430'
+  app/views/foos/new.html.erb:3:in `_app_views_foos_new_html_erb__777573238_2175100200_0'
+  app/controllers/foos_controller.rb:29:in `new'
+
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m

@@ -1,12 +1,13 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'lib/mir_form_builder'
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
-module MirExtensions
+module MirExtensionsContainer
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -39,9 +40,12 @@ module MirExtensions
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
+    config.action_view.default_form_builder = MirExtensions::MirFormBuilder
+    
     config.generators do |g|
       g.test_framework :rspec
     end
 
   end
 end
+

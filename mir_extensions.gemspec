@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{mir_extensions}
-  s.version = "0.2.0"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Corey Ehmke", "Rod Monje"]
@@ -57,9 +57,6 @@ Gem::Specification.new do |s|
      "db/seeds.rb",
      "db/test.sqlite3",
      "doc/README_FOR_APP",
-     "lib/core_ext/controller_extensions.rb",
-     "lib/core_ext/core_ext.rb",
-     "lib/core_ext/helper_extensions.rb",
      "lib/mir_extensions.rb",
      "lib/tasks/.gitkeep",
      "log/development.log",
@@ -72,7 +69,6 @@ Gem::Specification.new do |s|
      "public/500.html",
      "public/favicon.ico",
      "public/images/rails.png",
-     "public/index.html",
      "public/javascripts/application.js",
      "public/javascripts/controls.js",
      "public/javascripts/dragdrop.js",
@@ -95,9 +91,17 @@ Gem::Specification.new do |s|
   s.summary = %q{Standard extensions and utility methods for SEO Logic's Rails 3 apps.}
   s.test_files = [
     "spec/controllers/application_controller_spec.rb",
+     "spec/controllers/foos_controller_spec.rb",
      "spec/helpers/application_helper_spec.rb",
      "spec/mir_extensions_spec.rb",
-     "spec/spec_helper.rb"
+     "spec/routing/foos_routing_spec.rb",
+     "spec/spec_helper.rb",
+     "spec/support/integration_example_group.rb",
+     "spec/views/foos/edit.html.erb_spec.rb",
+     "spec/views/foos/index.html.erb_spec.rb",
+     "spec/views/foos/new.html.erb_spec.rb",
+     "spec/views/foos/show.html.erb_spec.rb",
+     "test/integration/foo_test.rb"
   ]
 
   if s.respond_to? :specification_version then
