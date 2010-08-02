@@ -14,14 +14,40 @@ describe "foos/edit.html.erb" do
     render
 
     rendered.should have_selector("form", :action => foo_path(@foo), :method => "post") do |form|
-      form.should have_xpath("//label[@for='foo_name']", :content => 'Name')
       form.should have_selector("input#foo_name", :name => "foo[name]")
-      form.should have_xpath("//label[@for='foo_active']", :content => 'Status')
-      form.should have_xpath("//label[@for='foo_active']", :content => 'Active', :class => 'inline')
       form.should have_selector("input#foo_active", :name => "foo[active]")
       form.should have_selector("select#foo_style", :name => "foo[style]")
-      form.should have_xpath("//select[@id='foo_style']/options", :content => 'Select...')
+      form.should have_xpath("//select[@id='foo_style']/option", :value => 'Select...')
     end
   end
 
+  it 'renders a text field with a default label' do
+    render
+    rendered.should have_selector("form", :action => foo_path(@foo), :method => "post") do |form|
+      form.should have_xpath("//label[@for='foo_name']", :content => 'Name')
+      form.should have_selector("input#foo_name", :name => "foo[name]")
+    end
+  end
+
+  it 'renders a field with a custom label' do
+    render
+    rendered.should have_selector("form", :action => foo_path(@foo), :method => "post") do |form|
+      form.should have_xpath("//label[@for='foo_active']", :content => 'Status')
+    end
+  end
+  
+  it 'renders an inline label for a checkbox' do
+    render
+    rendered.should have_selector("form", :action => foo_path(@foo), :method => "post") do |form|
+      form.should have_xpath("//label[@for='foo_active']", :content => 'Active', :class => 'inline')
+    end
+  end
+
+  it 'renders a select control with a default option' do
+    render
+    rendered.should have_selector("form", :action => foo_path(@foo), :method => "post") do |form|
+      form.should have_xpath("//select[@id='foo_style']/option", :value => 'Select...')
+    end
+  end
+  
 end

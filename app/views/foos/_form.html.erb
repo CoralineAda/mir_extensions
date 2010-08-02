@@ -13,9 +13,7 @@
 
   <%= f.text_field :name %>
   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
-  <%= f.select :style, ["foo", "bar"], :label => 'Select a Style' %>
+  <%= f.select :style, [select_prompt, "foo", "bar"], :label => 'Select a Style' %>
   <%= f.submit %>
 
-  <%= checkmark -%>
-  
 <% end %>

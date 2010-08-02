@@ -46,7 +46,7 @@ module MirExtensions
     end
   
     def checkmark
-      %{<div class="checkmark"></div>}
+      %{<div class="checkmark"></div>}.html_safe
     end
   
     def controller?( expression )
