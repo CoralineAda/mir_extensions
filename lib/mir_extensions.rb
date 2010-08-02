@@ -1,16 +1,8 @@
 require 'singleton'
 require 'friendly_id'
-require File.expand_path(File.dirname(__FILE__) + '/mir_extensions/core_ext')
-require File.expand_path(File.dirname(__FILE__) + '/mir_extensions/controller_extensions')
-require File.expand_path(File.dirname(__FILE__) + '/mir_form_builder')
+require 'core_ext/core_ext'
 
 module MirExtensions
-
-  module Blah
-    def foo
-      "bar"
-    end
-  end
   
   # Constants ======================================================================================
   

@@ -2318,3 +2318,105 @@ Redirected to http://test.host/foos
 Completed 302 Found in 2ms
 Rendered foos/_form.html.erb (16.5ms)
 Rendered foos/_form.html.erb (10.4ms)
+  Processing by FoosController#index as HTML
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#new as HTML
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#create as HTML
+  Parameters: {"foo"=>{"these"=>"params"}}
+Redirected to http://test.host/foos/1005
+Completed 302 Found in 3ms
+  Processing by FoosController#create as HTML
+  Parameters: {"foo"=>{}}
+Redirected to http://test.host/foos/1006
+Completed 302 Found in 3ms
+  Processing by FoosController#create as HTML
+  Parameters: {"foo"=>{"these"=>"params"}}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#create as HTML
+  Parameters: {"foo"=>{}}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#update as HTML
+  Parameters: {"id"=>"37", "foo"=>{"these"=>"params"}}
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/foos/1010
+Completed 302 Found in 3ms
+  Processing by FoosController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/foos/1011
+Completed 302 Found in 66ms
+  Processing by FoosController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/foos
+Completed 302 Found in 1ms
+  Processing by FoosController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/foos
+Completed 302 Found in 2ms
+Rendered foos/_form.html.erb (5.2ms)
+Rendered foos/_form.html.erb (2.5ms)
+  Processing by FoosController#index as HTML
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#new as HTML
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#create as HTML
+  Parameters: {"foo"=>{"these"=>"params"}}
+Redirected to http://test.host/foos/1005
+Completed 302 Found in 3ms
+  Processing by FoosController#create as HTML
+  Parameters: {"foo"=>{}}
+Redirected to http://test.host/foos/1006
+Completed 302 Found in 3ms
+  Processing by FoosController#create as HTML
+  Parameters: {"foo"=>{"these"=>"params"}}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#create as HTML
+  Parameters: {"foo"=>{}}
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#update as HTML
+  Parameters: {"id"=>"37", "foo"=>{"these"=>"params"}}
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/foos/1010
+Completed 302 Found in 3ms
+  Processing by FoosController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/foos/1011
+Completed 302 Found in 66ms
+  Processing by FoosController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by FoosController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/foos
+Completed 302 Found in 1ms
+  Processing by FoosController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/foos
+Completed 302 Found in 2ms
+Rendered foos/_form.html.erb (5.1ms)
+Rendered foos/_form.html.erb (2.6ms)

@@ -1356,3 +1356,45 @@ Rendered /Users/bantik/.rvm/gems/ruby-1.8.7-p249@rails3/gems/actionpack-3.0.0.rc
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 21:19:58 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (69.7ms)
+Rendered foos/new.html.erb within layouts/application (73.6ms)
+Completed 200 OK in 84ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 21:20:50 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (8.3ms)
+Rendered foos/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 21ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 21:21:00 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (71.3ms)
+Rendered foos/new.html.erb within layouts/application (75.2ms)
+Completed 200 OK in 85ms (Views: 79.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 21:21:02 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (6.2ms)
+Rendered foos/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 19ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 21:21:32 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (67.8ms)
+Rendered foos/new.html.erb within layouts/application (71.6ms)
+Completed 200 OK in 82ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foos/new" for 127.0.0.1 at Sun Aug 01 21:23:07 -0500 2010
+  Processing by FoosController#new as HTML
+Rendered foos/_form.html.erb (9.2ms)
+Rendered foos/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 0.0ms)
