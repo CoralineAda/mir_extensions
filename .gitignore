@@ -17,5 +17,8 @@ tmtags
 coverage
 rdoc
 pkg
+log
+tmp
+test
 
 ## PROJECT::SPECIFIC
