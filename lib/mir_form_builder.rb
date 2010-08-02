@@ -97,11 +97,10 @@
 #
 module MirExtensions
 
-  class MirFormBuilder < ActionView::Helpers::FormBuilder
-#    include ApplicationHelper
   
-    SELECT_PROMPT = 'Select...'
+  class MirFormBuilder < ActionView::Helpers::FormBuilder
     
+    include ActionView::Helpers::DateHelper
     helpers = field_helpers +
       %w{date_select datetime_select time_select} +
       %w{collection_select select country_select time_zone_select} -

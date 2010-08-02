@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Corey Ehmke", "Rod Monje"]
-  s.date = %q{2010-08-01}
+  s.date = %q{2010-08-02}
   s.description = %q{Standard extensions and utility methods for SEO Logic's Rails 3 apps.}
   s.email = %q{corey@seologic.com}
   s.extra_rdoc_files = [
@@ -70,10 +70,8 @@ Gem::Specification.new do |s|
      "lib/mir_extensions.rb",
      "lib/mir_form_builder.rb",
      "lib/tasks/.gitkeep",
-     "log/development.log",
      "log/production.log",
      "log/server.log",
-     "log/test.log",
      "mir_extensions.gemspec",
      "public/404.html",
      "public/422.html",
@@ -102,7 +100,6 @@ Gem::Specification.new do |s|
      "spec/views/foos/new.html.erb_spec.rb",
      "spec/views/foos/show.html.erb_spec.rb",
      "test/integration/foo_test.rb",
-     "tmp/pids/server.pid",
      "vendor/plugins/.gitkeep"
   ]
   s.homepage = %q{http://github.com/Bantik/mir_extensions}

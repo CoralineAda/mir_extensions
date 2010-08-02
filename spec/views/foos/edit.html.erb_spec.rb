@@ -50,4 +50,12 @@ describe "foos/edit.html.erb" do
     end
   end
   
+  it 'renders a date select' do
+    render
+    rendered.should have_selector("form", :action => foo_path(@foo), :method => "post") do |form|
+      form.should have_xpath("//select/option", :content => 'January')
+      form.should have_xpath("//select/option", :content => '1')
+      form.should have_xpath("//select/option", :content => '2010')
+    end
+  end
 end

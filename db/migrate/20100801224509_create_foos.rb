@@ -4,7 +4,8 @@ class CreateFoos < ActiveRecord::Migration
       t.string :name
       t.boolean :active
       t.string :style
-
+      t.datetime :due_date
+      t.string :country
       t.timestamps
     end
   end

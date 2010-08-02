@@ -14,6 +14,7 @@
   <%= f.text_field :name %>
   <%= f.check_box :active, :label => 'Status', :inline_label => 'Active' %>
   <%= f.select :style, [select_prompt, "foo", "bar"], :label => 'Select a Style' %>
-  <%= f.submit %>
+  <%= f.date_select :due_date, :order => [:month, :day, :year] -%>
+ <%= f.submit %>
 
 <% end %>

@@ -250,8 +250,7 @@ class ActiveRecord::Base
 
   #FIXME Extending AR in this way will stop working under Rails 2.3.2 for some reason.
 
-#   scope :order_by, lambda{ |col, dir| {:order => (col.blank?) ? ( (dir.blank?) ? 'id' : dir ) : "#{col} #{dir}"} }
-#   scope :limit, lambda { |num| { :limit => num } }
+  scope :order_by, lambda{ |col, dir| {:order => (col.blank?) ? ( (dir.blank?) ? 'id' : dir ) : "#{col} #{dir}"} }
 
   # TODO: call the column_names class method on the subclass
   #  named_scope :sort_by, lambda{ |col, dir| {:order => (col.blank?) ? ( (dir.blank?) ? (Client.column_names.include?('name') ? 'name' : 'id') : h(dir) ) : "#{h(col)} #{h(dir)}"} }

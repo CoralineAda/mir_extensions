@@ -190,8 +190,8 @@ module MirExtensions
     #
     # - item.rb:
     #
-    #     named_scope :active,   :conditions => { :is_active => true }
-    #     named_scope :inactive, :conditions => { :is_active => false }
+    #     scope :active,   :conditions => { :is_active => true }
+    #     scope :inactive, :conditions => { :is_active => false }
     #
     #     FILTERS = [
     #       {:scope => "all",       :label => "All"},
